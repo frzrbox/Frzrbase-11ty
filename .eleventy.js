@@ -22,7 +22,7 @@ module.exports = (config) => {
 
   // Watch all 11ty specific directories
   config.addWatchTarget(path.join(__dirname, "img"));
-  config.addWatchTarget(path.join(__dirname, "styles"));
+  config.addWatchTarget(path.join(__dirname, "scss"));
   config.addWatchTarget(path.join(__dirname, "includes"));
   config.addWatchTarget(path.join(__dirname, "data"));
   config.addWatchTarget(path.join(__dirname, "js"));

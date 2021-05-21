@@ -4,7 +4,10 @@
   "description": "An 11ty starter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm:dev:scss\" \"npx @11ty/eleventy --serve\"",
+    "build": "rm -rf _site && concurrently \"npm:build:scss\" \"npx @11ty/eleventy\"",
+    "dev:scss": "sass --watch scss:_site/css",
+    "build:scss": "sass scss:_site/css"
   },
   "author": "Frzrbox",
   "license": "MIT",
