@@ -1,23 +1,24 @@
 {
-  "name": "frzrbase-11ty",
-  "version": "0.0.1",
-  "description": "An 11ty starter",
-  "main": "index.js",
-  "scripts": {
-    "dev": "concurrently \"npm:dev:scss\" \"npx @11ty/eleventy --serve\"",
-    "build": "rm -rf _site && concurrently \"npm:build:scss\" \"npx @11ty/eleventy\"",
-    "dev:scss": "sass --watch scss:_site/css",
-    "build:scss": "sass scss:_site/css"
-  },
-  "author": "Frzrbox",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.9.0",
-    "concurrently": "^6.1.0",
-    "dotenv": "^9.0.2",
-    "eslint": "^7.26.0",
-    "pug": "^3.0.2",
-    "sass": "^1.33.0"
-  }
+	"name": "frzrbase-11ty",
+	"version": "0.0.1",
+	"description": "An 11ty starter",
+	"main": "index.js",
+	"scripts": {
+		"dev": "rm -rf _site && concurrently \"npm:dev:scss\" \"npx @11ty/eleventy --serve\"",
+		"build": "rm -rf _site && concurrently \"npm:build:scss\" \"npx @11ty/eleventy\"",
+		"dev:scss": "sass --watch scss:_site/css",
+		"build:scss": "sass scss:_site/css"
+	},
+	"author": "Frzrbox",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-img": "^0.9.0",
+		"concurrently": "^6.1.0",
+		"dotenv": "^9.0.2",
+		"eslint": "^7.26.0",
+		"include-media": "^1.4.10",
+		"pug": "^3.0.2",
+		"sass": "^1.33.0"
+	}
 }

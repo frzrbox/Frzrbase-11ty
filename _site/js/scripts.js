@@ -1,1 +1,1 @@
-console.log("hiii");
+console.log('Javascript connected');
