@@ -1,0 +1,19 @@
+block variables
+
+doctype html
+html(lang="en")
+    head
+        include ../partials/meta
+
+        style
+            each item in stylesheets
+                link(rel="stylesheet" href=item)
+
+        body
+            include ../partials/header
+
+            .content
+                block content 
+
+            each item in scripts
+                script(src=item)
