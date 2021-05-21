@@ -5,15 +5,16 @@ html(lang="en")
     head
         include ../partials/meta
 
-        style
-            each item in stylesheets
-                link(rel="stylesheet" href=item)
+        if stylesheets
+                each item in stylesheets
+                    link(rel="stylesheet" href=item)
 
         body
             include ../partials/header
 
-            .content
+            .content(data-template=template)
                 block content 
 
-            each item in scripts
-                script(src=item)
+            if scripts
+                each item in scripts
+                    script(src=item)
