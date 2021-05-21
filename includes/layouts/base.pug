@@ -1,0 +1,20 @@
+block variables
+
+doctype html
+html(lang="en")
+    head
+        include ../partials/meta
+
+        if stylesheets
+                each item in stylesheets
+                    link(rel="stylesheet" href=item)
+
+        body
+            include ../partials/header
+
+            .content(data-template=template)
+                block content 
+
+            if scripts
+                each item in scripts
+                    script(src=item)
