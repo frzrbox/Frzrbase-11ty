@@ -7,7 +7,7 @@ html(lang="en")
 
         if stylesheets
                 each item in stylesheets
-                    link(rel="stylesheet" href=item)
+                    link(rel="stylesheet"  media="print" onload="this.media='all'" href=item)
 
         body
             include ../partials/header
