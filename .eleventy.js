@@ -1,5 +1,5 @@
 const path = require('path');
-const imageShortcode = require('./shortcodes/imageShortcode');
+const imageShortcode = require('./transforms/shortcodes/imageShortcode');
 
 module.exports = (config) => {
 	const pug = require('pug');
@@ -27,7 +27,7 @@ module.exports = (config) => {
 	config.addWatchTarget(path.join(__dirname, 'data'));
 	config.addWatchTarget(path.join(__dirname, 'js'));
 
-	config.addPassthroughCopy('js');
+	// config.addPassthroughCopy("js");
 	config.addPassthroughCopy('assets');
 
 	// Wait before re-running 11ty command to keep up with concurrently

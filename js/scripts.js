@@ -1,1 +1,4 @@
-console.log('Javascript connected');
+import 'core-js';
+import { message } from './message';
+
+console.log(message);
